@@ -1,18 +1,44 @@
 <div style="view-transition-name: day-{{post.day}}">
-	<div class="entry-header-block entry-header-green">
-		<a href="/" class="btn btn-danger float-end mt-3">&laquo; Back to calendar</a>
-		<h1>Day {{ post.day }}</h1>	
-	</div>
 
-	<div class="entry-content container">	
-		{{ post.body | safe }}	
-	</div>
+	<div class="container content-center">
+		<div class="row entry-content container text-center">
+		{% if post.video %}
+				<video controls width="100%" autoplay>
+					<source src="{{post.video}}" type="video/mp4" />
+				</video>
+		{% endif %}
 
-	<div class="collect-sticker container">
-		<h2>Time to collect today's digital sticker!</h2>
-		<p>Click to collect your digital sticker and build up your own nativity scene:</p>
-		<div class="sticker-for-collection">
-			<a href="/stickerbook#{{post.day}}"><img src="{{ post.nativity_figure }}" class="grow"></a>
+			<div class="p-4">
+				{{ post.body | nl2br | safe }}
+				{% if post.podcast %}
+					<a class="btn btn-success" href="{{post.podcast}}">Listen to the podcast.</a>
+				{% endif %}
+			</div>
 		</div>
+
+		<div class="row text-white sticker-collection pb-4">
+			<div class="text-end col-6 col-md-4 offset-md-2">
+				<h3>Click to collect your digital sticker and build up your own nativity scene:</h2>
+			</div>
+			<div class="col-2">
+				<div class="sticker-arrow"></div>
+			</div>
+			<div class="col-4"> 
+				<div class="sticker-circle">
+					<a href="/stickerbook#{{post.day}}">
+						<img class="img-fluid" src="{{ post.nativity_figure }}">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		{# <div class="collect-sticker entry-content container">
+			<h2>Time to collect today's digital sticker!</h2>
+			<p>Click to collect your digital sticker and build up your own nativity scene:</p>
+			<div class="sticker-for-collection">
+				<a href="/stickerbook#{{post.day}}"><img src="{{ post.nativity_figure }}" class="grow"></a>
+			</div>
+		</div> #}
 	</div>
+
 </div>
