@@ -77,6 +77,18 @@ function cpt_render_meta_box($post) {
     wp_editor($body, 'cpt_body', array('textarea_name' => 'cpt_body'));
     ?><br>
 
+<<<<<<< Updated upstream
+=======
+    <label for="cpt_scripture"><?php _e('Scripture text', 'text_domain'); ?></label>
+    <input type="text" id="cpt_scripture" name="cpt_scripture" value="<?php echo esc_attr($scripture); ?>" /><br>
+
+    <label for="cpt_scripture_ref"><?php _e('Scripture reference', 'text_domain'); ?></label>
+    <input type="text" id="cpt_scripture_ref" name="cpt_scripture_ref" value="<?php echo esc_attr($scripture_ref); ?>" /><br>
+
+    <label for="cpt_heading"><?php _e('Heading', 'text_domain'); ?></label>
+    <input type="text" id="cpt_heading" name="cpt_heading" value="<?php echo esc_attr($heading); ?>" /><br>
+
+>>>>>>> Stashed changes
     <label for="cpt_podcast"><?php _e('Podcast (URL)', 'text_domain'); ?></label>
     <input type="url" id="cpt_podcast" name="cpt_podcast" value="<?php echo esc_attr($podcast); ?>" /><br>
 
