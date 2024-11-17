@@ -37,8 +37,6 @@ function initialiseStickerbook() {
         startTouch(this, e);
     });
     $('.sticker').on('touchstart', function(e) {    	
-        e.preventDefault();
-        e.stopPropagation();
         startTouch(this, e.touches[0]);
 
         if(!tapped){ //if tap is not set, set up single tap
@@ -67,10 +65,24 @@ function initialiseStickerbook() {
     });    
 
     // Mouse up event to stop dragging
-    $(document).on('mouseup touchend', function() {
-    	$(draggingElement).css('cursor', 'move');
-    	document.getElementById('drop-sticker').play();
-        draggingElement = null;        
+    $(document).on('mouseup touchend', function(e) {
+        if(draggingElement) {
+            $(draggingElement).css('cursor', 'move');
+            document.getElementById('drop-sticker').play();
+            const { top, left } = $(draggingElement).position() 
+            const docHeight = $(window).height()
+            const docWidth = $(window).width()
+
+            console.log({ top,  left, docHeight, docWidth})
+            
+            if(top < 0  || left < 0 || top > docHeight || left > docWidth) {
+                $(draggingElement).css({
+                    left: 0,
+                    top: 0 
+                });
+            }
+        }
+        draggingElement = null;
     });
 
 
@@ -98,4 +110,3 @@ function initialiseStickerbook() {
     	}
     }
 }
-
