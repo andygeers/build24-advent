@@ -625,67 +625,11 @@ hr {
 
   .lego-brick {
     width: 80px;
-    border-radius: 5px; /* Slight rounding for a more realistic shape */
-    position: relative; /* To position the studs */
-    height: 60px; /* Height of the brick */
-    border: 2px dashed #ffffff8a;
-    border-spacing: 5px;
-    padding-left: 0;
   }
-
-  .stud {            
-    height: 10px;
-    border-radius: 2px; /* Make it circular */
-    position: absolute; /* Position it relative to the brick */
-    top: -10px; /* Position to appear above the brick */
-    border: 2px dashed #ffffff8a;
-    border-bottom: none;
-  }
-
-  .lego-brick-4x1 .stud {
-    width: 20%; /* Diameter of the stud */
-  }
-
-  /* Positioning each stud */
-  .lego-brick-4x1 .stud:nth-child(1) { left: 5%; }
-  .lego-brick-4x1 .stud:nth-child(2) { left: 28.75%; }
-  .lego-brick-4x1 .stud:nth-child(3) { left: 52.5%; }        
-  .lego-brick-4x1 .stud:nth-child(4) { left: 76.25%; }
-
-  .lego-brick-3x1 .stud {
-    width: 24%; /* Diameter of the stud */
-  }
-
-  /* Positioning each stud */
-  .lego-brick-3x1 .stud:nth-child(1) { left: 6%; }
-  .lego-brick-3x1 .stud:nth-child(2) { left: 38%; } 
-  .lego-brick-3x1 .stud:nth-child(3) { left: 70%; }
-
-  .lego-brick-2x1 .stud {
-    width: 35%; /* Diameter of the stud */
-  }
-
-  /* Positioning each stud */
-  .lego-brick-2x1 .stud:nth-child(1) { left: 10%; }
-  .lego-brick-2x1 .stud:nth-child(2) { left: 55%; }        
-
 
   .brick-collection .lego-brick {
-  color: white;
-  font-family: degular, sans-serif;
   font-size: 30px;
-  font-weight: 800;
-  font-weight: bold;
-  line-height: 55px;
   margin: 0 -30px 0 0;
-
-  }
-
-  .brick-collection {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 10px;
-  
   }
 
   .red-heading {
