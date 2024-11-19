@@ -114,10 +114,7 @@ text-align: center;
     left: 50%; /* Center the logo horizontally */
     transform: translateX(-50%);
   }
-  
-  .logo {
-  }
-  
+
   /* Faith in Kids Button Styling */
   .btn-faithinkids {
     background-color: #009CEE;
@@ -410,11 +407,11 @@ a:visited.lego-brick {
 }
 
 #stable {
-    width: 700px;
     margin: 0 auto;
+    width: 1000px;
 }
 .stable-bg {
-    width: 700px;
+    height: 100%;
 }
 
 @media (max-width: 768px) {
