@@ -298,6 +298,7 @@ div#zoom {
     opacity: 1; /* Make it visible during the transition */       
 }
 
+
 .lego-brick {
   display: inline-block;
 }
@@ -625,7 +626,7 @@ hr {
 
   .brick-collection .lego-brick {
   font-size: 30px;
-  margin: 0 -30px 0 0;
+  margin-left: -10px;
   }
 
   .red-heading {
@@ -640,7 +641,7 @@ hr {
   background: url('/img/title-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   padding: 10px 5px 15px 5px;
   margin: 0 auto;
   margin-top: -10px;
