@@ -27,7 +27,7 @@ function initialiseStickerbook() {
 
             if (!startedDrag) {
             	startedDrag = true;            	
-            	document.getElementById('take-sticker1').play();
+            	document.getElementById('take-sticker1').play().catch(e => console.warn(`couldnt play sound ${e.message}`));
             }
         }
     }
@@ -70,12 +70,10 @@ function initialiseStickerbook() {
     $(document).on('mouseup touchend', function(e) {
         if(draggingElement) {
             $(draggingElement).css('cursor', 'move');
-            document.getElementById('drop-sticker').play();
+            document.getElementById('drop-sticker').play().catch(e => console.warn(`couldnt play sound ${e}`));
             const { top, left } = $(draggingElement).position() 
             const docHeight = $(window).height()
             const docWidth = $(window).width()
-
-            console.log({ top,  left, docHeight, docWidth})
             
             if(top < 0  || left < 0 || top > docHeight || left > docWidth) {
                 $(draggingElement).css({
