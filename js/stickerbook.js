@@ -75,7 +75,7 @@ function initialiseStickerbook() {
             const docHeight = $(window).height()
             const docWidth = $(window).width()
             
-            if(top < 0  || left < 0 || top > docHeight || left > docWidth) {
+            if(top < -100  || left < -100 || top > docHeight - 100 || left > docWidth - 100) {
                 $(draggingElement).css({
                     left: 0,
                     top: 0 
