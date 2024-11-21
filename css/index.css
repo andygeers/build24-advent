@@ -487,6 +487,7 @@ h3 {
 .nativity-container {
     border-radius: 20px;
     padding: 0;
+    background-color: rgb(255 255 255 / 22%);
     overflow: hidden;
 }
 
